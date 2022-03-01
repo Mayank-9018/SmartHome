@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="balcony"
+   width="47.999523"
+   height="47.993511"
+   viewBox="0 0 47.999525 47.993512"
+   version="1.1"
+   sodipodi:docname="balcony.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs28" />
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="8.1879886"
+     inkscape:cx="5.0073347"
+     inkscape:cy="26.746495"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="balcony" />
+  <path
+     id="Path_74"
+     data-name="Path 74"
+     d="M 9.9376912,26.809233 H 15.562313 V 43.775831 H 9.9376912 Z m 0,0"
+     fill="#ff4b00"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_75"
+     data-name="Path 75"
+     d="m 32.43721,26.809233 h 5.624621 V 43.775831 H 32.43721 Z m 0,0"
+     fill="#d03b00"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_76"
+     data-name="Path 76"
+     d="M 15.562313,26.809233 H 32.43721 V 43.775831 H 15.562313 Z m 0,0"
+     fill="#ffe470"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_77"
+     data-name="Path 77"
+     d="m 23.999761,26.809233 h 8.437449 v 16.966598 h -8.437449 z m 0,0"
+     fill="#fdbf00"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_78"
+     data-name="Path 78"
+     d="M 36.656449,8.4363991 V 28.214439 H 11.344105 V 8.4363991 L 23.999761,5.6239255 Z m 0,0"
+     fill="#ffe470"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_79"
+     data-name="Path 79"
+     d="M 36.655418,8.4363991 V 28.214439 H 23.999761 V 5.6239255 Z m 0,0"
+     fill="#fdbf00"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_80"
+     data-name="Path 80"
+     d="m 8.531278,19.628559 v 5.773406 l 2.109621,2.812474 3.516032,-2.812474 v -9.935413 z m 0,0"
+     fill="#ff4b00"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_81"
+     data-name="Path 81"
+     d="m 33.843622,15.466552 v 9.936444 l 2.812827,2.812474 2.812827,-2.812474 v -5.773405 z m 0,0"
+     fill="#d03b00"
+     style="stroke-width:1.03103" />
+  <g
+     id="Group_13"
+     data-name="Group 13"
+     transform="matrix(1.0310948,0,0,1.0309654,25.406175,26.809233)">
+    <path
+       id="Path_82"
+       data-name="Path 82"
+       d="m 453.728,286 v 15.093 l -1.364,2.728 L 451,301.093 V 286 Z m 0,0"
+       transform="translate(-434.634,-286)"
+       fill="#5a5a5a" />
+    <path
+       id="Path_83"
+       data-name="Path 83"
+       d="m 393.728,286 v 15.093 l -1.364,2.728 L 391,301.093 V 286 Z m 0,0"
+       transform="translate(-380.089,-286)"
+       fill="#5a5a5a" />
+    <path
+       id="Path_84"
+       data-name="Path 84"
+       d="m 333.728,286 v 15.093 l -1.364,2.728 L 331,301.093 V 286 Z m 0,0"
+       transform="translate(-325.545,-286)"
+       fill="#5a5a5a" />
+    <path
+       id="Path_85"
+       data-name="Path 85"
+       d="m 273.728,286 v 15.093 l -1.364,2.728 L 271,301.093 V 286 Z m 0,0"
+       transform="translate(-271,-286)"
+       fill="#5a5a5a" />
+  </g>
+  <path
+     id="Path_86"
+     data-name="Path 86"
+     d="m 22.593347,26.809233 v 15.560361 l -1.406412,2.812473 -1.406413,-2.812473 V 26.809233 Z m 0,0"
+     fill="#6e6e6e"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_87"
+     data-name="Path 87"
+     d="m 16.968727,26.809233 v 15.560361 l -1.406414,2.812473 -1.406414,-2.812473 V 26.809233 Z m 0,0"
+     fill="#6e6e6e"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_88"
+     data-name="Path 88"
+     d="M 11.344105,26.809233 V 42.369594 L 9.9376912,45.182067 8.531278,42.369594 V 26.809233 Z m 0,0"
+     fill="#6e6e6e"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_89"
+     data-name="Path 89"
+     d="M 5.7194825,26.809233 V 42.369594 L 4.3130693,45.182067 2.9066561,42.369594 V 26.809233 Z m 0,0"
+     fill="#6e6e6e"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_90"
+     data-name="Path 90"
+     d="m 39.46412,15.46449 v 4.162007 a 17.704927,17.702706 0 0 1 -5.624622,-1.349533 17.013064,17.010929 0 0 1 -4.190369,-2.446481 18.306056,18.303759 0 0 1 -5.65143,-7.3662478 18.314305,18.312007 0 0 1 -7.171264,8.4363898 17.175976,17.173821 0 0 1 -2.671566,1.37737 17.149168,17.147017 0 0 1 -5.623591,1.350564 V 15.46449 a 15.466421,15.464481 0 0 1 14.062069,-15.37994149 11.781288,11.77981 0 0 1 2.812828,0 A 15.466421,15.464481 0 0 1 39.46412,15.46449 Z m 0,0"
+     fill="#ff7816"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_91"
+     data-name="Path 91"
+     d="M 23.999761,8.4642352 V 9.3471132e-6 A 11.495675,11.494234 0 0 1 25.406175,0.08454851 15.466421,15.464481 0 0 1 39.466182,15.46449 v 4.162007 A 17.704927,17.702706 0 0 1 33.84156,18.276964 17.013064,17.010929 0 0 1 29.651191,15.830483 18.306056,18.303759 0 0 1 23.999761,8.4642352 Z m 0,0"
+     fill="#ff4b00"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_92"
+     data-name="Path 92"
+     d="M 0,25.402996 H 47.999522 V 28.21547 H 0 Z m 0,0"
+     fill="#6e6e6e"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_93"
+     data-name="Path 93"
+     d="M 23.999761,25.402996 H 47.999522 V 28.21547 H 23.999761 Z m 0,0"
+     fill="#5a5a5a"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_94"
+     data-name="Path 94"
+     d="M 0,42.369594 H 47.999522 V 47.99351 H 0 Z m 0,0"
+     fill="#ececf1"
+     style="stroke-width:1.03103" />
+  <path
+     id="Path_95"
+     data-name="Path 95"
+     d="M 23.999761,42.369594 H 47.999522 V 47.99351 H 23.999761 Z m 0,0"
+     fill="#d3d3d8"
+     style="stroke-width:1.03103" />
+</svg>

@@ -15,5 +15,5 @@ const TextStyle roomNameStyle = TextStyle(
 const TextStyle cpHeaderStyle = TextStyle(
   fontSize: 28,
   color: Color(0xFFFFFFFF),
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.bold,
 );

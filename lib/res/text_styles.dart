@@ -7,7 +7,7 @@ const TextStyle nLightsStyle = TextStyle(
 );
 
 const TextStyle roomNameStyle = TextStyle(
-  fontSize: 26,
+  fontSize: 20,
   color: Color.fromARGB(255, 57, 57, 57),
   fontWeight: FontWeight.w600,
 );

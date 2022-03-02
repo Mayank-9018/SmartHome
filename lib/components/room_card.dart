@@ -18,7 +18,7 @@ class RoomCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+          padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25.0),
             color: Colors.white,
@@ -39,10 +39,10 @@ class RoomCard extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   illustration,
-                  height: 60,
+                  height: 50,
                   key: const Key('illustration'),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
                 ConstrainedBox(
                   constraints:
                       BoxConstraints(maxWidth: constraints.maxWidth - 40),

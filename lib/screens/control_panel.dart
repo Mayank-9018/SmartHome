@@ -39,15 +39,30 @@ class _ControlPanelScreenState extends State<ControlPanelScreen> {
                   topRight: Radius.circular(30.0),
                 ),
               ),
-              child: GridView(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 40.0),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 20,
-                  crossAxisSpacing: 25,
-                ),
-                children: rooms,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                    child: Text(
+                      'All Rooms',
+                      style: allRoomStyle,
+                    ),
+                  ),
+                  Expanded(
+                    child: GridView(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 20.0),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 20,
+                        crossAxisSpacing: 25,
+                      ),
+                      children: rooms,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

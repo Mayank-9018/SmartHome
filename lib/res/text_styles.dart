@@ -1,4 +1,5 @@
 import 'package:flutter/painting.dart';
+import 'package:smart_home/res/colors.dart';
 
 const TextStyle nLightsStyle = TextStyle(
   fontWeight: FontWeight.bold,
@@ -16,4 +17,10 @@ const TextStyle cpHeaderStyle = TextStyle(
   fontSize: 28,
   color: Color(0xFFFFFFFF),
   fontWeight: FontWeight.bold,
+);
+
+const TextStyle allRoomStyle = TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: Color(0xFF002D67),
 );

@@ -15,45 +15,54 @@ class RoomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 20, 0, 10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25.0),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade200,
-            offset: const Offset(1, 1),
-            blurRadius: 10,
-            spreadRadius: 4,
-          )
-        ],
-      ),
-      child: FittedBox(
-        alignment: Alignment.centerLeft,
-        fit: BoxFit.scaleDown,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SvgPicture.asset(
-              illustration,
-              height: 60,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Container(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25.0),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade200,
+                offset: const Offset(1, 1),
+                blurRadius: 10,
+                spreadRadius: 4,
+              )
+            ],
+          ),
+          child: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SvgPicture.asset(
+                  illustration,
+                  height: 60,
+                  key: const Key('illustration'),
+                ),
+                const SizedBox(height: 20),
+                ConstrainedBox(
+                  constraints:
+                      BoxConstraints(maxWidth: constraints.maxWidth - 40),
+                  child: Text(
+                    roomName,
+                    style: roomNameStyle,
+                    overflow: TextOverflow.fade,
+                    softWrap: false,
+                  ),
+                ),
+                const SizedBox(height: 5),
+                Text(
+                  '$lights ${lights == 1 ? "Light" : "Lights"}',
+                  style: nLightsStyle,
+                ),
+              ],
             ),
-            const SizedBox(height: 20),
-            Text(
-              roomName,
-              style: roomNameStyle,
-            ),
-            const SizedBox(height: 5),
-            FittedBox(
-              child: Text(
-                '$lights ${lights == 1 ? "Light" : "Lights"}',
-                style: nLightsStyle,
-              ),
-            )
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

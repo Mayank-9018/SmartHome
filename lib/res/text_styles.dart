@@ -11,3 +11,9 @@ const TextStyle roomNameStyle = TextStyle(
   color: Color.fromARGB(255, 57, 57, 57),
   fontWeight: FontWeight.w600,
 );
+
+const TextStyle cpHeaderStyle = TextStyle(
+  fontSize: 28,
+  color: Color(0xFFFFFFFF),
+  fontWeight: FontWeight.w500,
+);

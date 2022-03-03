@@ -7,14 +7,21 @@ class RoomControlHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 300,
-      child: BackButton(
-        color: Colors.white,
-        onPressed: () {
-          Provider.of<NavigationManager>(context, listen: false)
-              .backToControlPanel();
-        },
+    return WillPopScope(
+      onWillPop: () async {
+        Provider.of<NavigationManager>(context, listen: false)
+            .backToControlPanel();
+        return false;
+      },
+      child: SizedBox(
+        height: 300,
+        child: BackButton(
+          color: Colors.white,
+          onPressed: () {
+            Provider.of<NavigationManager>(context, listen: false)
+                .backToControlPanel();
+          },
+        ),
       ),
     );
   }

@@ -9,8 +9,8 @@ class RoomControlHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 300,
-      child: IconButton(
-        icon: const Icon(Icons.arrow_back),
+      child: BackButton(
+        color: Colors.white,
         onPressed: () {
           Provider.of<NavigationManager>(context, listen: false)
               .backToControlPanel();

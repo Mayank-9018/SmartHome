@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="51"
-   height="51"
-   viewBox="0 0 51 51"
+   width="50.995998"
+   height="50.5"
+   viewBox="0 0 50.995998 50.5"
    version="1.1"
    id="svg14"
    sodipodi:docname="bed.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/home/mayank-pop/StudioProjects/smart_home/assets/bed.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,17 +26,21 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="11.058824"
-     inkscape:cx="25.5"
-     inkscape:cy="21.25"
+     inkscape:cx="20.61702"
+     inkscape:cy="26.132978"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg14" />
+     inkscape:current-layer="svg14"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <g
      id="bed"
-     transform="translate(-2,-3)">
+     transform="translate(-2,-2.9999999)">
     <path
        id="Path_5"
        data-name="Path 5"

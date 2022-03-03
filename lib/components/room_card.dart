@@ -43,12 +43,7 @@ class RoomCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SvgPicture.asset(
-                    //TODO: Test with images instead of vectos for lags
-                    illustration,
-                    height: 50,
-                    key: const Key('illustration'),
-                  ),
+                  Image.asset(illustration, height: 50),
                   const SizedBox(height: 15),
                   ConstrainedBox(
                     constraints:

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="47.306"
+   height="47.306"
+   viewBox="0 0 47.306 47.306"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="kitchen.svg"
+   inkscape:export-filename="/home/mayank-pop/StudioProjects/smart_home/assets/kitchen.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs31" />
+  <sodipodi:namedview
+     id="namedview29"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="17.260407"
+     inkscape:cx="23.637913"
+     inkscape:cy="23.637913"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg27"
+     fit-margin-top="1"
+     lock-margins="true"
+     fit-margin-left="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1" />
+  <g
+     id="kitchen"
+     transform="translate(-23,-23)">
+    <path
+       id="Path_55"
+       data-name="Path 55"
+       d="m 136,272 h 23.434 v 6.249 H 136 Z"
+       transform="translate(-101.064,-223.785)"
+       fill="#4d6378" />
+    <path
+       id="Path_56"
+       data-name="Path 56"
+       d="M 152.4,278.249 V 272 h -9.37 v 6.249 H 136 V 288.4 h 23.434 v -10.151 z"
+       transform="translate(-101.064,-223.785)"
+       fill="#42566b" />
+    <path
+       id="Path_57"
+       data-name="Path 57"
+       d="M 0,0 H 10.936 V 21.091 H 0 Z"
+       transform="rotate(180,34.653,34.653)"
+       fill="#f6bb00" />
+    <path
+       id="Path_58"
+       data-name="Path 58"
+       d="M 24,24 H 34.936 V 41.966 H 24 Z"
+       fill="#f6bb00" />
+    <path
+       id="Path_59"
+       data-name="Path 59"
+       d="m 24,272 h 10.936 v 21.091 H 24 Z"
+       transform="translate(0,-223.785)"
+       fill="#f6bb00" />
+    <path
+       id="Path_60"
+       data-name="Path 60"
+       d="m 448,296 h 1.562 v 3.125 H 448 Z"
+       transform="translate(-382.6,-245.441)"
+       fill="#eda600" />
+    <path
+       id="Path_61"
+       data-name="Path 61"
+       d="M 0,0 H 10.936 V 17.966 H 0 Z"
+       transform="rotate(180,34.653,20.983)"
+       fill="#f6bb00" />
+    <path
+       id="Path_62"
+       data-name="Path 62"
+       d="m 168,176 h 17.185 v 3.125 H 168 Z"
+       transform="translate(-129.94,-137.158)"
+       fill="#42566b" />
+    <path
+       id="Path_63"
+       data-name="Path 63"
+       d="M 185.185,147.125 182.06,144 H 171.125 L 168,147.125 Z"
+       transform="translate(-129.94,-108.283)"
+       fill="#4d6378" />
+    <path
+       id="Path_64"
+       data-name="Path 64"
+       d="m 232,296 h 4.687 v 1.562 H 232 Z"
+       transform="translate(-187.69,-245.441)"
+       fill="#02c26a" />
+    <g
+       id="Group_12"
+       data-name="Group 12"
+       transform="translate(36.27,50.428)">
+      <circle
+         id="Ellipse_5"
+         data-name="Ellipse 5"
+         cx="1"
+         cy="1"
+         r="1"
+         transform="translate(-0.27,-0.428)"
+         fill="#42566b" />
+      <ellipse
+         id="Ellipse_6"
+         data-name="Ellipse 6"
+         cx="0.5"
+         cy="1"
+         rx="0.5"
+         ry="1"
+         transform="translate(2.73,-0.428)"
+         fill="#42566b" />
+      <ellipse
+         id="Ellipse_7"
+         data-name="Ellipse 7"
+         cx="0.5"
+         cy="1"
+         rx="0.5"
+         ry="1"
+         transform="translate(16.73,-0.428)"
+         fill="#42566b" />
+      <circle
+         id="Ellipse_8"
+         data-name="Ellipse 8"
+         cx="1"
+         cy="1"
+         r="1"
+         transform="translate(18.73,-0.428)"
+         fill="#42566b" />
+    </g>
+    <path
+       id="Path_65"
+       data-name="Path 65"
+       d="m 168,368 h 17.185 v 3.906 H 168 Z"
+       transform="translate(-129.94,-310.411)"
+       fill="#84d8e8" />
+    <path
+       id="Path_66"
+       data-name="Path 66"
+       d="m 136,440 h 23.434 v 4.687 H 136 Z"
+       transform="translate(-101.064,-375.381)"
+       fill="#eda600" />
+    <path
+       id="Path_67"
+       data-name="Path 67"
+       d="m 136,24 h 11.717 V 35.717 H 136 Z"
+       transform="translate(-101.064)"
+       fill="#eda600" />
+    <path
+       id="Path_68"
+       data-name="Path 68"
+       d="m 216,88 h 1.562 v 3.125 H 216 Z"
+       transform="translate(-173.253,-57.751)"
+       fill="#cf8300" />
+    <path
+       id="Path_69"
+       data-name="Path 69"
+       d="m 48,152 h 1.562 v 3.125 H 48 Z"
+       transform="translate(-21.657,-115.502)"
+       fill="#eda600" />
+    <path
+       id="Path_70"
+       data-name="Path 70"
+       d="m 48,296 h 1.562 v 3.125 H 48 Z"
+       transform="translate(-21.657,-245.441)"
+       fill="#eda600" />
+    <path
+       id="Path_71"
+       data-name="Path 71"
+       d="M 0,0 H 11.717 V 11.717 H 0 Z"
+       transform="rotate(180,29.185,17.8585)"
+       fill="#de9400" />
+    <path
+       id="Path_72"
+       data-name="Path 72"
+       d="m 280,88 h 1.562 v 3.125 H 280 Z"
+       transform="translate(-231.004,-57.751)"
+       fill="#cf8300" />
+    <path
+       id="Path_73"
+       data-name="Path 73"
+       d="m 448,152 h 1.562 v 3.125 H 448 Z"
+       transform="translate(-382.6,-115.502)"
+       fill="#eda600" />
+  </g>
+</svg>

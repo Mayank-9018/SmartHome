@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_home/models/navigation.dart';
+import 'package:smart_home/res/assets.dart';
 import 'package:smart_home/res/text_styles.dart';
 import 'package:smart_home/screens/room_control.dart';
 
@@ -13,7 +13,7 @@ class RoomCard extends StatelessWidget {
     Key? key,
     this.roomName = "Room",
     this.lights = 1,
-    this.illustration = 'assets/default.svg',
+    this.illustration = AssetImages.defaultRoom,
   }) : super(key: key);
 
   @override

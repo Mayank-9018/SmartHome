@@ -9,21 +9,21 @@ class RoomControlHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        Provider.of<NavigationManager>(context, listen: false)
-            .backToControlPanel();
+        backBtnPressed(context);
         return false;
       },
       child: SizedBox(
         height: 300,
         child: BackButton(
           color: Colors.white,
-          onPressed: () {
-            Provider.of<NavigationManager>(context, listen: false)
-                .backToControlPanel();
-          },
+          onPressed: () => backBtnPressed(context),
         ),
       ),
     );
+  }
+
+  void backBtnPressed(context) {
+    Provider.of<NavigationManager>(context, listen: false).backToControlPanel();
   }
 }
 

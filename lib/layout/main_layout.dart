@@ -17,6 +17,8 @@ class MainLayout extends StatefulWidget {
 class _MainLayoutState extends State<MainLayout> {
   late Widget _header;
   late Widget _body;
+  final resizeDuration = const Duration(milliseconds: 500);
+  final switchDuration = const Duration(milliseconds: 250);
 
   @override
   void initState() {
@@ -33,14 +35,12 @@ class _MainLayoutState extends State<MainLayout> {
       body: Column(
         children: [
           AnimatedSize(
-            duration: const Duration(milliseconds: 500),
-            child: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 250), child: _header),
+            duration: resizeDuration,
+            child: AnimatedSwitcher(duration: switchDuration, child: _header),
             curve: Curves.decelerate,
           ),
           Expanded(
             child: Container(
-              // duration: const Duration(seconds: 1),
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -48,8 +48,7 @@ class _MainLayoutState extends State<MainLayout> {
                   topRight: Radius.circular(30.0),
                 ),
               ),
-              child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 250), child: _body),
+              child: AnimatedSwitcher(duration: switchDuration, child: _body),
             ),
           ),
         ],

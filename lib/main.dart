@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/res/light_theme.dart';
-import 'package:smart_home/screens/control_panel.dart';
 
 void main() {
   runApp(const SmartHomeApp());
@@ -11,9 +12,12 @@ class SmartHomeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: lightTheme,
-      home: const ControlPanelScreen(),
+    return Provider<NavigationManager>(
+      create: (_) => NavigationManager(),
+      builder: (_, __) => MaterialApp(
+        theme: lightTheme,
+        home: Provider.of<NavigationManager>(_).mainLayout,
+      ),
     );
   }
 }

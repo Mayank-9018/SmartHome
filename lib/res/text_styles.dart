@@ -1,5 +1,4 @@
 import 'package:flutter/painting.dart';
-import 'package:smart_home/res/colors.dart';
 
 const TextStyle nLightsStyle = TextStyle(
   fontWeight: FontWeight.bold,

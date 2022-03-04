@@ -20,17 +20,9 @@ class RoomCard extends StatelessWidget {
           return Container(
             padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25.0),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.shade200,
-                  offset: const Offset(1, 1),
-                  blurRadius: 10,
-                  spreadRadius: 4,
-                )
-              ],
-            ),
+                borderRadius: BorderRadius.circular(25.0),
+                color: Colors.white,
+                border: Border.all(color: Colors.grey)),
             child: FittedBox(
               alignment: Alignment.centerLeft,
               fit: BoxFit.scaleDown,

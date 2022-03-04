@@ -40,8 +40,10 @@ class LightCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
-          BrightnessSlider(light)
+          const SizedBox(height: 20),
+          BrightnessSlider(light),
+          const SizedBox(height: 20),
+          if (light.supportsColors) ColorPallete(light)
         ],
       ),
     );
@@ -125,4 +127,42 @@ class _LightBulbState extends State<LightBulb> {
   }
 
   void updateLight() => setState(() {});
+}
+
+class ColorPallete extends StatelessWidget {
+  final Light light;
+
+  const ColorPallete(this.light, {Key? key}) : super(key: key);
+
+  final List<Color> colors = const [
+    Color(0xFFFFFFFF),
+    Color(0xFFFFC107),
+    Color(0xFFF44336),
+    Color(0xFF4CAF50),
+    Color(0xFF2196F3),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: colors
+          .map(
+            (e) => GestureDetector(
+              onTap: () => light.updateColor(e),
+              child: Container(
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: e,
+                  borderRadius: BorderRadius.circular(20.0),
+                  border:
+                      e == colors[0] ? Border.all(color: Colors.grey) : null,
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
 }

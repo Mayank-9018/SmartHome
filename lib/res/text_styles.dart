@@ -23,3 +23,8 @@ const TextStyle allRoomStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: Color(0xFF002D67),
 );
+
+const TextStyle appBarRoomNameStyle = TextStyle(
+  fontSize: 24,
+  color: Color(0xFFFFFFFF),
+);

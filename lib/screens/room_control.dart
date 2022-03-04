@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_home/models/navigation.dart';
+import 'package:smart_home/models/room.dart';
+import 'package:smart_home/res/text_styles.dart';
 
 class RoomControlHeader extends StatelessWidget {
-  const RoomControlHeader({Key? key}) : super(key: key);
+  final Room room;
+  const RoomControlHeader(this.room, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +20,9 @@ class RoomControlHeader extends StatelessWidget {
           color: Colors.white,
           onPressed: () => backBtnPressed(context),
         ),
-        title: const Text(
-          "AppBar",
+        title: Text(
+          room.name,
+          style: appBarRoomNameStyle,
         ),
         toolbarHeight: 100,
       ),
@@ -31,10 +35,23 @@ class RoomControlHeader extends StatelessWidget {
 }
 
 class RoomControlBody extends StatelessWidget {
-  const RoomControlBody({Key? key}) : super(key: key);
+  final Room room;
+  const RoomControlBody(this.room, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListView();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+          child: Text(
+            '${room.lights} lights',
+            style: allRoomStyle,
+          ),
+        ),
+        Expanded(child: ListView()),
+      ],
+    );
   }
 }

@@ -14,7 +14,7 @@ class RoomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Provider.of<NavigationManager>(context, listen: false)
-          .updateLayout(const RoomControlHeader(), const RoomControlBody()),
+          .updateLayout(RoomControlHeader(room), RoomControlBody(room)),
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(

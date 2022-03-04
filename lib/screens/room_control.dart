@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:smart_home/components/light_card.dart';
 import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/models/room.dart';
 import 'package:smart_home/res/text_styles.dart';
@@ -46,11 +47,18 @@ class RoomControlBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
           child: Text(
-            '${room.lights} lights',
+            '${room.lights} ${room.lights == 1 ? "light" : "lights"}',
             style: allRoomStyle,
           ),
         ),
-        Expanded(child: ListView()),
+        Expanded(
+          child: ListView.separated(
+            itemCount: room.lightsData.length,
+            padding: const EdgeInsets.all(20),
+            itemBuilder: (cont, ind) => LightCard(room.lightsData[ind]),
+            separatorBuilder: (con, ind) => const SizedBox(height: 20),
+          ),
+        ),
       ],
     );
   }

@@ -31,7 +31,7 @@ class _MainLayoutState extends State<MainLayout> {
   Widget build(BuildContext context) {
     Provider.of<NavigationManager>(context).registerUpdateMethod(updateLayout);
     return Scaffold(
-      backgroundColor: bgBlue,
+      backgroundColor: Colors.blue.shade900,
       body: Column(
         children: [
           SafeArea(

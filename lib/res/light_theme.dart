@@ -7,4 +7,5 @@ ThemeData lightTheme = ThemeData(
     centerTitle: true,
     elevation: 0,
   ),
+  androidOverscrollIndicator: AndroidOverscrollIndicator.stretch
 );

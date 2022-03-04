@@ -35,32 +35,13 @@ class LightCard extends StatelessWidget {
                     'assets/light_hold.png',
                     height: 40,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: light.color == Colors.white
-                                ? Colors.lightBlue.shade200
-                                : light.color,
-                            offset: const Offset(0, 8),
-                            blurRadius: 12.0,
-                            spreadRadius: 1.0),
-                      ],
-                      color: light.color,
-                      borderRadius: const BorderRadius.only(
-                        bottomLeft: Radius.circular(20.0),
-                        bottomRight: Radius.circular(20.0),
-                      ),
-                    ),
-                    height: 10,
-                    width: 20,
-                  ),
+                  LightBulb(light),
                 ],
               ),
             ],
           ),
           const SizedBox(height: 10),
-          BrightnessSlider(light.brightness)
+          BrightnessSlider(light)
         ],
       ),
     );
@@ -68,22 +49,14 @@ class LightCard extends StatelessWidget {
 }
 
 class BrightnessSlider extends StatefulWidget {
-  final double value;
-  const BrightnessSlider(this.value, {Key? key}) : super(key: key);
+  final Light light;
+  const BrightnessSlider(this.light, {Key? key}) : super(key: key);
 
   @override
   State<BrightnessSlider> createState() => _BrightnessSliderState();
 }
 
 class _BrightnessSliderState extends State<BrightnessSlider> {
-  late double value;
-
-  @override
-  void initState() {
-    value = widget.value;
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -91,7 +64,7 @@ class _BrightnessSliderState extends State<BrightnessSlider> {
         Icon(Icons.dark_mode_outlined, color: Colors.blue.shade900),
         Expanded(
           child: Slider(
-            value: value,
+            value: widget.light.brightness,
             onChanged: updateBrightness,
           ),
         ),
@@ -102,7 +75,54 @@ class _BrightnessSliderState extends State<BrightnessSlider> {
 
   void updateBrightness(double newVal) {
     setState(() {
-      value = newVal;
+      widget.light.updateBrightness(newVal);
     });
   }
+}
+
+class LightBulb extends StatefulWidget {
+  final Light light;
+  const LightBulb(this.light, {Key? key}) : super(key: key);
+
+  @override
+  State<LightBulb> createState() => _LightBulbState();
+}
+
+class _LightBulbState extends State<LightBulb> {
+  @override
+  void initState() {
+    widget.light.registerUpdateMethod(updateLight);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 150),
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: (widget.light.color == Colors.white
+                    ? Colors.lightBlue.shade200
+                    : widget.light.color)
+                .withOpacity(widget.light.brightness),
+            offset: const Offset(0, 4),
+            blurRadius: 10,
+            spreadRadius: 4.0,
+          ),
+        ],
+        color: widget.light.brightness <= 0.1
+            ? Colors.grey
+            : widget.light.color.withOpacity(widget.light.brightness),
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
+      ),
+      height: 10,
+      width: 20,
+    );
+  }
+
+  void updateLight() => setState(() {});
 }

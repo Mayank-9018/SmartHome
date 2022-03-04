@@ -136,10 +136,11 @@ class ColorPallete extends StatelessWidget {
 
   final List<Color> colors = const [
     Color(0xFFFFFFFF),
-    Color(0xFFFFC107),
-    Color(0xFFF44336),
-    Color(0xFF4CAF50),
-    Color(0xFF2196F3),
+    Color.fromARGB(255, 255, 204, 51),
+    Color.fromARGB(255, 255, 97, 97),
+    Color.fromARGB(255, 75, 255, 81),
+    Color.fromARGB(255, 86, 179, 255),
+    Color.fromARGB(255, 236, 127, 255),
   ];
 
   @override

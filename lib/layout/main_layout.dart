@@ -34,10 +34,12 @@ class _MainLayoutState extends State<MainLayout> {
       backgroundColor: bgBlue,
       body: Column(
         children: [
-          AnimatedSize(
-            duration: resizeDuration,
-            child: AnimatedSwitcher(duration: switchDuration, child: _header),
-            curve: Curves.decelerate,
+          SafeArea(
+            child: AnimatedSize(
+              duration: resizeDuration,
+              child: AnimatedSwitcher(duration: switchDuration, child: _header),
+              curve: Curves.decelerate,
+            ),
           ),
           Expanded(
             child: Container(

@@ -12,12 +12,15 @@ class RoomControlHeader extends StatelessWidget {
         backBtnPressed(context);
         return false;
       },
-      child: SizedBox(
-        height: 300,
-        child: BackButton(
+      child: AppBar(
+        leading: BackButton(
           color: Colors.white,
           onPressed: () => backBtnPressed(context),
         ),
+        title: const Text(
+          "AppBar",
+        ),
+        toolbarHeight: 100,
       ),
     );
   }

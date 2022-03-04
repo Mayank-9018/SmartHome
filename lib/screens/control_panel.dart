@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/components/room_card.dart';
-import 'package:smart_home/res/assets.dart';
+import 'package:smart_home/res/data.dart';
 import 'package:smart_home/res/text_styles.dart';
 
 class ControlPanelBody extends StatelessWidget {
   const ControlPanelBody({Key? key}) : super(key: key);
-
-  final List<RoomCard> rooms = const [
-    RoomCard(roomName: 'Bedroom', lights: 4, illustration: AssetImages.bedroom),
-    RoomCard(
-        roomName: 'Living room', lights: 2, illustration: AssetImages.living),
-    RoomCard(roomName: 'Kitchen', lights: 5, illustration: AssetImages.kitchen),
-    RoomCard(
-        roomName: 'Bathroom', lights: 1, illustration: AssetImages.bathroom),
-    RoomCard(roomName: 'Outdoor', lights: 5, illustration: AssetImages.outdoor),
-    RoomCard(roomName: 'Balcony', lights: 2, illustration: AssetImages.balcony),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +26,7 @@ class ControlPanelBody extends StatelessWidget {
               mainAxisSpacing: 15,
               crossAxisSpacing: 15,
             ),
-            children: rooms,
+            children: rooms.map((e) => RoomCard(e)).toList(),
           ),
         ),
       ],
@@ -50,22 +39,20 @@ class ControlPanelHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 40),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Text(
-              'Control\nPanel',
-              style: cpHeaderStyle,
-            ),
-            CircleAvatar(
-              radius: 25,
-              child: Icon(Icons.person, size: 28),
-            )
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 40),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: const [
+          Text(
+            'Control\nPanel',
+            style: cpHeaderStyle,
+          ),
+          CircleAvatar(
+            radius: 25,
+            child: Icon(Icons.person, size: 28),
+          )
+        ],
       ),
     );
   }

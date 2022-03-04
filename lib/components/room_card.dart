@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_home/models/navigation.dart';
-import 'package:smart_home/res/assets.dart';
 import 'package:smart_home/res/text_styles.dart';
 import 'package:smart_home/screens/room_control.dart';
 
+import '../models/room.dart';
+
 class RoomCard extends StatelessWidget {
-  final String roomName;
-  final int lights;
-  final String illustration;
-  const RoomCard({
-    Key? key,
-    this.roomName = "Room",
-    this.lights = 1,
-    this.illustration = AssetImages.defaultRoom,
-  }) : super(key: key);
+  final Room room;
+  const RoomCard(this.room, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +37,13 @@ class RoomCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(illustration, height: 50),
+                  Image.asset(room.illustration, height: 50),
                   const SizedBox(height: 15),
                   ConstrainedBox(
                     constraints:
                         BoxConstraints(maxWidth: constraints.maxWidth - 40),
                     child: Text(
-                      roomName,
+                      room.name,
                       style: roomNameStyle,
                       overflow: TextOverflow.fade,
                       softWrap: false,
@@ -57,7 +51,7 @@ class RoomCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 5),
                   Text(
-                    '$lights ${lights == 1 ? "Light" : "Lights"}',
+                    '${room.lights} ${room.lights == 1 ? "Light" : "Lights"}',
                     style: nLightsStyle,
                   ),
                 ],

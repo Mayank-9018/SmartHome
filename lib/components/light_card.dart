@@ -42,8 +42,10 @@ class LightCard extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           BrightnessSlider(light),
-          const SizedBox(height: 20),
-          if (light.supportsColors) ColorPallete(light)
+          if (light.supportsColors) ...[
+            const SizedBox(height: 20),
+            ColorPallete(light),
+          ]
         ],
       ),
     );

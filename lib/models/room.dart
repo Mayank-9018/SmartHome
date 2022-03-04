@@ -1,8 +1,10 @@
+import 'package:smart_home/models/light.dart';
+
 class Room {
   final String name;
   final int lights;
   final String illustration;
-  final List<Map<String, dynamic>> lightsData;
+  final List<Light> lightsData;
   Room({
     required this.name,
     required this.lights,

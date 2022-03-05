@@ -73,6 +73,8 @@ class BrightnessSlider extends StatefulWidget {
 class _BrightnessSliderState extends State<BrightnessSlider> {
   double currentValue = 0.0;
   late Tween<double> valuesTween;
+  final Animation<double> curvedAnimation =
+      CurvedAnimation(parent: controller, curve: Curves.decelerate);
 
   @override
   void initState() {
@@ -106,7 +108,7 @@ class _BrightnessSliderState extends State<BrightnessSlider> {
 
   void animateSlider() {
     setState(() {
-      currentValue = valuesTween.evaluate(controller);
+      currentValue = valuesTween.evaluate(curvedAnimation);
     });
   }
 }
@@ -163,7 +165,8 @@ class ColorPallete extends StatelessWidget {
 
   const ColorPallete(this.light, {Key? key}) : super(key: key);
 
-  final List<Color> colors = const [ //TODO: Update colors to a softer shade
+  final List<Color> colors = const [
+    //TODO: Update colors to a softer shade
     Color(0xFFFFFFFF),
     Color.fromARGB(255, 255, 204, 51),
     Color.fromARGB(255, 255, 97, 97),

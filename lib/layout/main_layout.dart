@@ -93,7 +93,13 @@ class RotatingCircles extends AnimatedWidget {
   final Widget image = Image.asset(AssetImages.circles);
 
   RotatingCircles({Key? key, required this.animationController})
-      : super(key: key, listenable: animationController);
+      : super(
+          key: key,
+          listenable: CurvedAnimation(
+            parent: animationController,
+            curve: Curves.decelerate,
+          ),
+        );
 
   @override
   Widget build(BuildContext context) {

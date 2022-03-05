@@ -209,9 +209,7 @@ class ColorPallete extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: color,
                   borderRadius: BorderRadius.circular(20.0),
-                  border: color == colors[0]
-                      ? Border.all(color: Colors.grey)
-                      : null,
+                  border: Border.all(color: Colors.grey.shade700),
                 ),
               ),
             ),

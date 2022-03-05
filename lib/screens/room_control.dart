@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_home/components/light_card.dart';
+import 'package:smart_home/models/animation_handle.dart';
 import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/models/room.dart';
 import 'package:smart_home/res/text_styles.dart';
@@ -33,6 +34,7 @@ class RoomControlHeader extends StatelessWidget {
   }
 
   void backBtnPressed(context) {
+    Provider.of<AnimationControllerHandle>(context, listen: false).reverse();
     Provider.of<NavigationManager>(context, listen: false).backToControlPanel();
   }
 }

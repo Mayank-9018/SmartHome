@@ -6,4 +6,5 @@ class AssetImages {
   static const String kitchen = "assets/kitchen.png";
   static const String living = "assets/room.png";
   static const String defaultRoom = "assets/default.png";
+  static const String circles = "assets/circles.png";
 }

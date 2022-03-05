@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:smart_home/models/animation_handle.dart';
 import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/res/colors.dart';
 import 'package:smart_home/res/text_styles.dart';
@@ -15,8 +16,12 @@ class RoomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     bool darkTheme = Theme.of(context).brightness == Brightness.dark;
     return GestureDetector(
-      onTap: () => Provider.of<NavigationManager>(context, listen: false)
-          .updateLayout(RoomControlHeader(room), RoomControlBody(room)),
+      onTap: () {
+        Provider.of<NavigationManager>(context, listen: false)
+            .updateLayout(RoomControlHeader(room), RoomControlBody(room));
+        Provider.of<AnimationControllerHandle>(context, listen: false)
+            .forward();
+      },
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(

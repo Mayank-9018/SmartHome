@@ -6,7 +6,6 @@ import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/models/room.dart';
 import 'package:smart_home/res/text_styles.dart';
 
-import '../res/colors.dart';
 
 class RoomControlHeader extends StatelessWidget {
   final Room room;

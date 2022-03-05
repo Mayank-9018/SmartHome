@@ -13,7 +13,7 @@ ThemeData lightTheme = ThemeData(
   sliderTheme: SliderThemeData(
     activeTrackColor: Colors.blue.shade900,
     inactiveTickMarkColor: Colors.blue.shade50,
-    thumbColor: Colors.blue.shade900,
+    thumbColor: Colors.amber.shade600,
     overlayColor: Colors.blue.shade900.withOpacity(0.25),
   ),
 );

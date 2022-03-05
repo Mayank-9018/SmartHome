@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
+  brightness: Brightness.light,
+  cardColor: Colors.white,
   fontFamily: 'Be Vietnam Pro',
   appBarTheme: const AppBarTheme(
     color: Colors.transparent,

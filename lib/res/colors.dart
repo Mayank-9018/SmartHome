@@ -1,3 +1,4 @@
 import 'package:flutter/painting.dart';
 
-Color bgBlue = const Color.fromARGB(255, 10, 84, 180);
+Color darkBlue = const Color(0xFF0D47A1);
+Color lightBlue = const Color(0xFF2196F3);

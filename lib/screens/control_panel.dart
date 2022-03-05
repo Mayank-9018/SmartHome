@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/components/room_card.dart';
+import 'package:smart_home/res/colors.dart';
 import 'package:smart_home/res/data.dart';
 import 'package:smart_home/res/text_styles.dart';
 
@@ -8,14 +9,17 @@ class ControlPanelBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool darkTheme = Theme.of(context).brightness == Brightness.dark;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
           child: Text(
             'All Rooms',
-            style: allRoomStyle,
+            style: allRoomStyle.copyWith(
+              color: darkTheme ? lightBlue : darkBlue,
+            ),
           ),
         ),
         Expanded(

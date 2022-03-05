@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_home/models/navigation.dart';
+import 'package:smart_home/res/dark_theme.dart';
 import 'package:smart_home/res/light_theme.dart';
 
 void main() {
@@ -16,6 +17,8 @@ class SmartHomeApp extends StatelessWidget {
       create: (_) => NavigationManager(),
       builder: (_, __) => MaterialApp(
         theme: lightTheme,
+        darkTheme: darkTheme,
+        themeMode: ThemeMode.system,
         home: Provider.of<NavigationManager>(_).mainLayout,
       ),
     );

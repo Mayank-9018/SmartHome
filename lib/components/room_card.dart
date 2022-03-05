@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_home/models/navigation.dart';
+import 'package:smart_home/res/colors.dart';
 import 'package:smart_home/res/text_styles.dart';
 import 'package:smart_home/screens/room_control.dart';
 
@@ -12,6 +13,7 @@ class RoomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool darkTheme = Theme.of(context).brightness == Brightness.dark;
     return GestureDetector(
       onTap: () => Provider.of<NavigationManager>(context, listen: false)
           .updateLayout(RoomControlHeader(room), RoomControlBody(room)),
@@ -21,7 +23,6 @@ class RoomCard extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
-                color: Colors.white,
                 border: Border.all(color: Colors.grey)),
             child: FittedBox(
               alignment: Alignment.centerLeft,
@@ -36,7 +37,8 @@ class RoomCard extends StatelessWidget {
                         BoxConstraints(maxWidth: constraints.maxWidth - 40),
                     child: Text(
                       room.name,
-                      style: roomNameStyle,
+                      style: roomNameStyle.copyWith(
+                          color: darkTheme ? lightBlue : darkBlue),
                       overflow: TextOverflow.fade,
                       softWrap: false,
                     ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/res/colors.dart';
 import 'package:smart_home/res/text_styles.dart';
 
 import '../models/light.dart';
+
+bool darkTheme = false;
 
 class LightCard extends StatelessWidget {
   final Light light;
@@ -9,6 +12,7 @@ class LightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    darkTheme = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 20,
@@ -26,7 +30,8 @@ class LightCard extends StatelessWidget {
             children: [
               Text(
                 light.name,
-                style: lightNameStyle,
+                style: lightNameStyle.copyWith(
+                    color: darkTheme ? lightBlue : darkBlue),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,14 +70,14 @@ class _BrightnessSliderState extends State<BrightnessSlider> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.dark_mode_outlined, color: Colors.blue.shade900),
+        Icon(Icons.dark_mode_outlined, color: darkTheme ? lightBlue : darkBlue),
         Expanded(
           child: Slider(
             value: widget.light.brightness,
             onChanged: updateBrightness,
           ),
         ),
-        Icon(Icons.light_mode, color: Colors.blue.shade900),
+        Icon(Icons.light_mode, color: darkTheme ? lightBlue : darkBlue),
       ],
     );
   }

@@ -5,6 +5,8 @@ import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/models/room.dart';
 import 'package:smart_home/res/text_styles.dart';
 
+import '../res/colors.dart';
+
 class RoomControlHeader extends StatelessWidget {
   final Room room;
   const RoomControlHeader(this.room, {Key? key}) : super(key: key);
@@ -48,7 +50,9 @@ class RoomControlBody extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
           child: Text(
             '${room.lights} ${room.lights == 1 ? "light" : "lights"}',
-            style: allRoomStyle,
+            style: allRoomStyle.copyWith(
+              color: darkTheme ? lightBlue : darkBlue,
+            ),
           ),
         ),
         Expanded(

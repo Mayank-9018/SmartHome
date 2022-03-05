@@ -26,7 +26,7 @@ class _MainLayoutState extends State<MainLayout>
   void initState() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 750),
+      duration: resizeDuration,
     );
     _header = widget.header;
     _body = widget.body;

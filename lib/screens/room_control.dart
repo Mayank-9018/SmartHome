@@ -6,7 +6,6 @@ import 'package:smart_home/models/navigation.dart';
 import 'package:smart_home/models/room.dart';
 import 'package:smart_home/res/text_styles.dart';
 
-
 class RoomControlHeader extends StatelessWidget {
   final Room room;
   const RoomControlHeader(this.room, {Key? key}) : super(key: key);
@@ -52,16 +51,44 @@ class RoomControlHeader extends StatelessWidget {
   }
 }
 
-class RoomControlBody extends StatelessWidget {
+class RoomControlBody extends StatefulWidget {
   final Room room;
   const RoomControlBody(this.room, {Key? key}) : super(key: key);
 
   @override
+  State<RoomControlBody> createState() => _RoomControlBodyState();
+}
+
+class _RoomControlBodyState extends State<RoomControlBody>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _animationController;
+
+  @override
+  void initState() {
+    _animationController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 250));
+    super.initState();
+    Future.delayed(
+      const Duration(milliseconds: 250),
+      () => _animationController.forward(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      itemCount: room.lightsData.length,
+      itemCount: widget.room.lightsData.length,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-      itemBuilder: (cont, ind) => LightCard(room.lightsData[ind]),
+      itemBuilder: (cont, ind) => LightCard(
+        widget.room.lightsData[ind],
+        animController: _animationController,
+      ),
       separatorBuilder: (con, ind) => const SizedBox(height: 20),
     );
   }

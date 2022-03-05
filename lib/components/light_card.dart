@@ -5,10 +5,15 @@ import 'package:smart_home/res/text_styles.dart';
 import '../models/light.dart';
 
 bool darkTheme = false;
+late AnimationController controller;
 
 class LightCard extends StatelessWidget {
   final Light light;
-  const LightCard(this.light, {Key? key}) : super(key: key);
+
+  LightCard(this.light, {Key? key, required AnimationController animController})
+      : super(key: key) {
+    controller = animController;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +71,16 @@ class BrightnessSlider extends StatefulWidget {
 }
 
 class _BrightnessSliderState extends State<BrightnessSlider> {
+  double currentValue = 0.0;
+  late Tween<double> valuesTween;
+
+  @override
+  void initState() {
+    controller.addListener(animateSlider);
+    valuesTween = Tween(begin: 0.0, end: widget.light.brightness);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -73,7 +88,7 @@ class _BrightnessSliderState extends State<BrightnessSlider> {
         Icon(Icons.dark_mode_outlined, color: darkTheme ? lightBlue : darkBlue),
         Expanded(
           child: Slider(
-            value: widget.light.brightness,
+            value: currentValue,
             onChanged: updateBrightness,
           ),
         ),
@@ -84,7 +99,14 @@ class _BrightnessSliderState extends State<BrightnessSlider> {
 
   void updateBrightness(double newVal) {
     setState(() {
+      currentValue = newVal;
       widget.light.updateBrightness(newVal);
+    });
+  }
+
+  void animateSlider() {
+    setState(() {
+      currentValue = valuesTween.evaluate(controller);
     });
   }
 }
@@ -141,7 +163,7 @@ class ColorPallete extends StatelessWidget {
 
   const ColorPallete(this.light, {Key? key}) : super(key: key);
 
-  final List<Color> colors = const [
+  final List<Color> colors = const [ //TODO: Update colors to a softer shade
     Color(0xFFFFFFFF),
     Color.fromARGB(255, 255, 204, 51),
     Color.fromARGB(255, 255, 97, 97),

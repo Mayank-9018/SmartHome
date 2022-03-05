@@ -19,16 +19,30 @@ class RoomControlHeader extends StatelessWidget {
         backBtnPressed(context);
         return false;
       },
-      child: AppBar(
-        leading: BackButton(
-          color: Colors.white,
-          onPressed: () => backBtnPressed(context),
-        ),
-        title: Text(
-          room.name,
-          style: appBarRoomNameStyle,
-        ),
-        toolbarHeight: 100,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AppBar(
+            leading: BackButton(
+              color: Colors.white,
+              onPressed: () => backBtnPressed(context),
+            ),
+            title: Text(
+              room.name,
+              style: appBarRoomNameStyle,
+            ),
+            toolbarHeight: 100,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 20, 20, 30),
+            child: Text(
+              '${room.lights} ${room.lights == 1 ? "light" : "lights"}',
+              style: nLightsStyle.copyWith(
+                fontSize: 24,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -45,27 +59,11 @@ class RoomControlBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-          child: Text(
-            '${room.lights} ${room.lights == 1 ? "light" : "lights"}',
-            style: allRoomStyle.copyWith(
-              color: darkTheme ? lightBlue : darkBlue,
-            ),
-          ),
-        ),
-        Expanded(
-          child: ListView.separated(
-            itemCount: room.lightsData.length,
-            padding: const EdgeInsets.all(20),
-            itemBuilder: (cont, ind) => LightCard(room.lightsData[ind]),
-            separatorBuilder: (con, ind) => const SizedBox(height: 20),
-          ),
-        ),
-      ],
+    return ListView.separated(
+      itemCount: room.lightsData.length,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+      itemBuilder: (cont, ind) => LightCard(room.lightsData[ind]),
+      separatorBuilder: (con, ind) => const SizedBox(height: 20),
     );
   }
 }

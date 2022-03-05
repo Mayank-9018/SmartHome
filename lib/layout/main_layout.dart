@@ -19,14 +19,14 @@ class _MainLayoutState extends State<MainLayout>
   late final AnimationController animationController;
   late Widget _header;
   late Widget _body;
-  final resizeDuration = const Duration(milliseconds: 500);
+  final animationDuration = const Duration(milliseconds: 500);
   final switchDuration = const Duration(milliseconds: 250);
 
   @override
   void initState() {
     animationController = AnimationController(
       vsync: this,
-      duration: resizeDuration,
+      duration: animationDuration,
     );
     _header = widget.header;
     _body = widget.body;
@@ -53,7 +53,7 @@ class _MainLayoutState extends State<MainLayout>
               children: [
                 SafeArea(
                   child: AnimatedSize(
-                    duration: resizeDuration,
+                    duration: animationDuration,
                     child: AnimatedSwitcher(
                         duration: switchDuration, child: _header),
                     curve: Curves.decelerate,
@@ -69,7 +69,7 @@ class _MainLayoutState extends State<MainLayout>
                       ),
                     ),
                     child: AnimatedSwitcher(
-                        duration: switchDuration, child: _body),
+                        duration: animationDuration, child: _body),
                   ),
                 ),
               ],

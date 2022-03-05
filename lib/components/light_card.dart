@@ -178,24 +178,49 @@ class ColorPallete extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: colors
-          .map(
-            (e) => GestureDetector(
-              onTap: () => light.updateColor(e),
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: buildDots());
+  }
+
+  List<Widget> buildDots() {
+    double delay = 0.14;
+    List<Widget> dots = [];
+    for (int i = 0; i < colors.length; i++) {
+      Animation<double> curvedAnimation = CurvedAnimation(
+        parent: controller,
+        curve: Interval(
+          delay,
+          1.0,
+          curve: Curves.decelerate,
+        ),
+      );
+      Color color = colors[i];
+      dots.add(
+        FadeTransition(
+          opacity: curvedAnimation,
+          child: SlideTransition(
+            position:
+                Tween<Offset>(begin: const Offset(0, -0.5), end: Offset.zero)
+                    .animate(curvedAnimation),
+            child: InkWell(
+              onTap: () => light.updateColor(color),
               child: Container(
                 height: 30,
                 width: 30,
                 decoration: BoxDecoration(
-                  color: e,
+                  color: color,
                   borderRadius: BorderRadius.circular(20.0),
-                  border:
-                      e == colors[0] ? Border.all(color: Colors.grey) : null,
+                  border: color == colors[0]
+                      ? Border.all(color: Colors.grey)
+                      : null,
                 ),
               ),
             ),
-          )
-          .toList(),
-    );
+          ),
+        ),
+      );
+      delay += 0.14;
+    }
+    return dots;
   }
 }

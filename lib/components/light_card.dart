@@ -166,13 +166,12 @@ class ColorPallete extends StatelessWidget {
   const ColorPallete(this.light, {Key? key}) : super(key: key);
 
   final List<Color> colors = const [
-    //TODO: Update colors to a softer shade
     Color(0xFFFFFFFF),
-    Color.fromARGB(255, 255, 204, 51),
-    Color.fromARGB(255, 255, 97, 97),
-    Color.fromARGB(255, 75, 255, 81),
-    Color.fromARGB(255, 86, 179, 255),
-    Color.fromARGB(255, 236, 127, 255),
+    Color.fromARGB(255, 251, 212, 94),
+    Color.fromARGB(255, 255, 115, 115),
+    Color.fromARGB(255, 108, 236, 123),
+    Color.fromARGB(255, 122, 192, 236),
+    Color.fromARGB(255, 224, 146, 238)
   ];
 
   @override

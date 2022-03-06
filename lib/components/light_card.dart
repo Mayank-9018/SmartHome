@@ -206,6 +206,7 @@ class ColorPallete extends StatelessWidget {
             child: InkWell(
               onTap: () => light.updateColor(color),
               child: Container(
+                key: const Key('color-dots'),
                 height: 30,
                 width: 30,
                 decoration: BoxDecoration(

@@ -5,7 +5,7 @@ class Light {
   double brightness;
   Color color;
   final bool supportsColors;
-  late final Function updateMethod;
+  late Function updateMethod;
   Light(this.name, this.brightness, this.color, {this.supportsColors = false});
 
   void updateBrightness(double newBrightness) {

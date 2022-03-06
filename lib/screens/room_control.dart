@@ -87,7 +87,7 @@ class _RoomControlBodyState extends State<RoomControlBody>
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       itemBuilder: (cont, ind) => LightCard(
         widget.room.lightsData[ind],
-        animController: _animationController,
+        animationController: _animationController,
       ),
       separatorBuilder: (con, ind) => const SizedBox(height: 20),
     );

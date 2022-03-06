@@ -5,15 +5,13 @@ import 'package:smart_home/res/text_styles.dart';
 import '../models/light.dart';
 
 bool darkTheme = false;
-late AnimationController controller;
 
 class LightCard extends StatelessWidget {
   final Light light;
+  final AnimationController animationController;
 
-  LightCard(this.light, {Key? key, required AnimationController animController})
-      : super(key: key) {
-    controller = animController;
-  }
+  const LightCard(this.light, {Key? key, required this.animationController})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +49,10 @@ class LightCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          BrightnessSlider(light),
+          BrightnessSlider(light, animationController),
           if (light.supportsColors) ...[
             const SizedBox(height: 20),
-            ColorPallete(light),
+            ColorPallete(light, animationController),
           ]
         ],
       ),
@@ -64,7 +62,9 @@ class LightCard extends StatelessWidget {
 
 class BrightnessSlider extends StatefulWidget {
   final Light light;
-  const BrightnessSlider(this.light, {Key? key}) : super(key: key);
+  final AnimationController animationController;
+  const BrightnessSlider(this.light, this.animationController, {Key? key})
+      : super(key: key);
 
   @override
   State<BrightnessSlider> createState() => _BrightnessSliderState();
@@ -73,12 +73,13 @@ class BrightnessSlider extends StatefulWidget {
 class _BrightnessSliderState extends State<BrightnessSlider> {
   double currentValue = 0.0;
   late Tween<double> valuesTween;
-  final Animation<double> curvedAnimation =
-      CurvedAnimation(parent: controller, curve: Curves.decelerate);
+  late final Animation<double> curvedAnimation;
 
   @override
   void initState() {
-    controller.addListener(animateSlider);
+    widget.animationController.addListener(animateSlider);
+    curvedAnimation = CurvedAnimation(
+        parent: widget.animationController, curve: Curves.decelerate);
     valuesTween = Tween(begin: 0.0, end: widget.light.brightness);
     super.initState();
   }
@@ -162,8 +163,9 @@ class _LightBulbState extends State<LightBulb> {
 
 class ColorPallete extends StatelessWidget {
   final Light light;
-
-  const ColorPallete(this.light, {Key? key}) : super(key: key);
+  final AnimationController animationController;
+  const ColorPallete(this.light, this.animationController, {Key? key})
+      : super(key: key);
 
   final List<Color> colors = const [
     Color(0xFFFFFFFF),
@@ -186,7 +188,7 @@ class ColorPallete extends StatelessWidget {
     List<Widget> dots = [];
     for (int i = 0; i < colors.length; i++) {
       Animation<double> curvedAnimation = CurvedAnimation(
-        parent: controller,
+        parent: animationController,
         curve: Interval(
           delay,
           1.0,
